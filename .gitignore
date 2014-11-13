@@ -1,4 +1,5 @@
 .gitattributes
+Thumbs.db
 
 # User-specific files
 *.suo
