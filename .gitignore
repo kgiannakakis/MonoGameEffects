@@ -15,6 +15,3 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
-
-# Content XNB files
-*.xnb
