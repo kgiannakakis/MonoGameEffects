@@ -1,3 +1,5 @@
+.gitattributes
+
 # User-specific files
 *.suo
 *.user
