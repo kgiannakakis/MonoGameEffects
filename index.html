@@ -1,1 +1,46 @@
-Hello world!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MonoGameEffects is a port of the excellent HLSL and Effects Tutorials from RB Whitaker.">
+    <meta name="keywords" content="MonoGame, XNA, Effects, Shaders">
+    <meta name="author" content="Kostas Giannakakis">
+
+    <title>MonoGame Effects</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    </head>
+    <body>
+    <div class="container">
+        <div class="row col-md-10 col-md-offset-1">
+            <h1>MonoGame Effects</h1>
+            <p><a href="https://github.com/kgiannakakis/MonoGameEffects">MonoGameEffects</a> is a port of the excellent <a href="http://rbwhitaker.wikidot.com/hlsl-tutorials">HLSL and Effects Tutorials</a> from <a href="http://rbwhitaker.wikidot.com/">RB Whitaker</a>. It aims to demonstrate the usage of custom effects in MonoGame. Currently the Windows Store, Windows Phone and WindowsGL platform are supported. Other OpenGL based platforms, such as Android and iOS, should also work based on the WindowsGL code. However, they aren't tested.</p>
+            <h2>Pre-requisites</h2>
+            <ul>
+                <li><p>Read the original <a href="http://rbwhitaker.wikidot.com/hlsl-tutorials">HLSL and Effects Tutorials</a>. The shaders and game code require some small changes for MonoGame, but the theory still applies to the new environment and it is necessary in order to understand how effects work. This information won't be repeated here.</p></li>
+                <li><p>Download one of the development builds from <a href="http://www.monogame.net/downloads/">MonoGame downloads page</a>. This contain the MonoGame Content Pipeline tool, which isn't available in the 3.2 release. The MonoGame Pipeline Tool will be used for creating the content files. This is a Windows only tool and its usage is documented <a href="http://www.monogame.net/documentation/?page=Using_The_Pipeline_Tool">here</a>. There are some cases (like loading DDS files) that the Pipeline can't still handle. For these, we are going to use an XNA project for Windows Phone 7. These cases are going to be described in detail in the individual effect sections.</p></li>
+                <li><p>Read the <a href="http://www.monogame.net/documentation/?page=Custom_Effects">documentation</a> about custom effects. Debugging shaders is a difficult task, so you need to make sure that you follow all advices in the documentation.</p></li>
+            </ul>
+            <h2>MonoGame Pipeline</h2>
+            <img src="MonogamePipeline.png" alt="MonoGame Content Pipeline" >
+            <a href="http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=22694909">Autodesk FBX converter</a>
+            
+            
+            <h2>Effects</h2>
+            <h3>Ambient</h3>
+            <h3>Diffuse</h3>
+            <h3>Specular</h3>
+            <h3>Textures</h3>
+            <h3>BumpMap</h3>
+            <h3>Gray scale</h3>
+            <h3>Sky map</h3>
+            <h3>Reflection</h3>
+            <h3>Transparency</h3>
+
+        </div>
+    </div>
+    </body>
+ </html>
