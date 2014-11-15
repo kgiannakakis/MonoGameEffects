@@ -30,16 +30,40 @@
             <p><img src="MonogamePipeline.png" alt="MonoGame Content Pipeline" ></p>
             <p>In the original tutorials ASCII FBX files are used. The MonoGame Pipeline supports only the more recent binary FBX format. You can use the free <a href="http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=22694909">Autodesk FBX converter</a> to convert from one form to another. In the provided source code, I have already converted the model files to the FBX binary form.</p>
             <h2>Effects</h2>
+            <h3>Default</h3>
+            <p>This doesn't make use of a custom effect, but instead uses MonoGame's built in BasicEffect with default lighting enabled to present a rotating model. It is included in order to compare the result with the other custom effects.</p>
+            
             <h3>Ambient</h3>
+            <p>This is the most simple shader effect originally presented <a href="http://rbwhitaker.wikidot.com/first-shader">here</a>. A single color is used for the whole model. Please note that for WindowsGL platform default values for the shader's parameters aren't supported. Therefore you need to initialize all of them in code. This applies to all custom shaders.</p>
+            
             <h3>Diffuse</h3>
+            <p><a href="http://rbwhitaker.wikidot.com/diffuse-lighting-shader">This</a> shader demonstrates a diffuse lighting component. Notice that a big part of the model remains black. This is normal as only a single source of lighting is used. This is in contrast to the default BasicEffect, where three different directional lights with a different intensity are used. In a real world game almost always more than one sources of lighting are used. However, these tutorials are mainly for educational purposes and try to be as simple as possible. You can easily add more lighting sources yourselves.</p>
+            
             <h3>Specular</h3>
-            <h3>Textures</h3>
-            <h3>BumpMap</h3>
+            <p>The <a href="http://rbwhitaker.wikidot.com/specular-lighting-shader">specular</a> shader introduces specular lighting. Again a single lighting source is used.</p>
+            
+            <h3>Texturing</h3>
+            <p>This <a href="http://rbwhitaker.wikidot.com/texturing-shader">texturing</a> shader performs the same operation as the default BasicEffect. However it doesn't use the same lights so the output isn't the same at all directions.</p>
+            
+            <h3>Bump Map</h3>
+            <p>The <a href="http://rbwhitaker.wikidot.com/bump-map-shader-1">bump map</a> shader is the first one that achieves something that can't be done with MonoGame's built in effects. In order for the bump map shader to work the tangent and binormal information of the model must be included in the content file. The MonoGame Pipeline tool has this as an option (Generate Tangent Frames), but even if this is enabled, it doesn't actually do so. For this reason I have used an XNA Windows Phone 7 project in Visual Studio to create the Helicopter.xnb file. The outcome is included in the source code for your convenience. This effect doesn't work in the WindowsGL platform. I don't know if the content generation or the runtime is to be blamed for this.</p>
+            
             <h3>Gray scale</h3>
+            <p>This effect performs a gray scale effect similar, but not identical to the one presented in the <a href="http://rbwhitaker.wikidot.com/post-processing-effects">post-processing effects tutorial</a>.</p>
+            
             <h3>Sky map</h3>
+            <p>This <a href="http://rbwhitaker.wikidot.com/skyboxes-1">tutorial</a> presents a sky map shader. It requires a DDS file to be loaded as a TextureCube in the game code. The MonoGame Pipeline tool doesn't support DDS files. For this reason we again need to use a Windows Phone 7 project. An alternative would be to load the 6 faces of the cube as textures and construct from them a TextureCube in code.</p>
+            
             <h3>Reflection</h3>
+            <p>The <a href="http://rbwhitaker.wikidot.com/reflection-shader">reflection shader</a> tutorial constructs a sphere reflecting the environment. MonoGame can perform this with the built-in EnvironmentMap effect. This shader, similar to the Sky map, requires a TextureCube object. You can construct one from a DDS file or programmatically, with the 6 faces of a cube. You can also follow <a href="http://xbox.create.msdn.com/en-US/education/catalog/sample/custom_model_effect">this XBOX tutorial</a> to create one from a custom content pipeline processor.</p>
+            
             <h3>Transparency</h3>
-
+             <p>The <a href="http://rbwhitaker.wikidot.com/transparency-shader">transparency tutorial</a> demonstrates a semi-transparent effect. This is different from the built-in AlphaTest effect, where a pixel is either fully opaque or fully transparent. In the original shader the AlphaBlendEnable state was set to true in the shader code. This is necessary for the transparency to work. However, when this is set, you won't be able to combine transparency with other effects, such as a sky map. For this reason, it is better to set this in code: </p>
+             
+             <pre>
+graphics.GraphicsDevice.BlendState = BlendState.AlphaBlend;
+DrawModelWithTransparencyEffect(model, world, view, projection);
+graphics.GraphicsDevice.BlendState = BlendState.Opaque;</pre>
         </div>
     </div>
     </body>
