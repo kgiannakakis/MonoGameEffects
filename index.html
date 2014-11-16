@@ -19,6 +19,7 @@
             <h1>MonoGame Effects</h1>
             <p><a href="https://github.com/kgiannakakis/MonoGameEffects">MonoGameEffects</a> is a port of the excellent <a href="http://rbwhitaker.wikidot.com/hlsl-tutorials">HLSL and Effects Tutorials</a> from <a href="http://rbwhitaker.wikidot.com/">RB Whitaker</a>. It aims to demonstrate the usage of custom effects in MonoGame. Currently the Windows Store, Windows Phone and WindowsGL platform are supported. Other OpenGL based platforms, such as Android and iOS, should also work based on the WindowsGL code. However, they aren't tested.</p>
             <p>The source code is maintained in <a href=""https://github.com/kgiannakakis/MonoGameEffects>GitHub</a>.</p>
+            <p style="text-align:center;"><img src="MonoGameEffectsSkyboxSmall.png" alt="MonoGame Effects Skybox" ></p>
             <h2>Pre-requisites</h2>
             <ul>
                 <li><p>Read the original <a href="http://rbwhitaker.wikidot.com/hlsl-tutorials">HLSL and Effects Tutorials</a>. The shaders and game code require some small changes for MonoGame, but the theory still applies to the new environment and it is necessary in order to understand how effects work. This information won't be repeated here.</p></li>
@@ -27,7 +28,7 @@
             </ul>
             <h2>MonoGame Pipeline</h2>
             <p>The MonoGame Pipeline tool is a recent addition to the MonoGame toolchain. Although not fully ready yet, I prefer it for creating the MonoGame XNB files. It is very easy to use and doesn't require using XNA Studio or creating a Windows Phone 7 project in Visual Studio. It also supports OpenGL platforms. This is especially important for shaders, where HLSL files are automatically converted to GLSL form. The conversion is handled by the tool. Therefore it is necessary to select the appropriate platform at the project properties.</p>
-            <p><img src="MonogamePipeline.png" alt="MonoGame Content Pipeline" ></p>
+            <p style="text-align:center;"><img src="MonogamePipeline.png" alt="MonoGame Content Pipeline" ></p>
             <p>In the original tutorials ASCII FBX files are used. The MonoGame Pipeline supports only the more recent binary FBX format. You can use the free <a href="http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=22694909">Autodesk FBX converter</a> to convert from one form to another. In the provided source code, I have already converted the model files to the FBX binary form.</p>
             <h2>Effects</h2>
             <h3>Default</h3>
