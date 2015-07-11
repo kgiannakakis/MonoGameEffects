@@ -39,6 +39,7 @@ x64/
 *.userprefs
 *.cachefile
 *.apk
+*.mgcontent
 
 # Visual C++ cache files
 ipch/
