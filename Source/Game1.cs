@@ -1,7 +1,6 @@
 ﻿using Hud;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Skyboxes;
 using System;
 
@@ -270,7 +269,7 @@ namespace MonoGameEffects
 
                     graphics.GraphicsDevice.RasterizerState = rOriginalRasterizerState;
 
-                    DrawModelWithReflectionEffect(sphere, world, view, projection);
+					DrawModelWithReflectionEffect(model, world, view, projection);
                     break;
                 case EffectType.Transparency:
                     RasterizerState tOriginalRasterizerState = graphics.GraphicsDevice.RasterizerState;

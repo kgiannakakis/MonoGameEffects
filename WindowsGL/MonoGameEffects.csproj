@@ -37,11 +37,17 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Game1.cs" />
-    <Compile Include="HudManager.cs" />
+    <Compile Include="..\Source\Game1.cs">
+      <Link>Game1.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\HudManager.cs">
+      <Link>HudManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\SkyBox.cs">
+      <Link>SkyBox.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SkyBox.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework, Version=3.4.0.459, Culture=neutral, processorArchitecture=MSIL">
@@ -60,14 +66,80 @@
       <Link>SDL.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\Content\Source\Content\HelicopterTexture.xnb">
+      <Link>Content\HelicopterTexture.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\Source\Content\HelicopterTexture_0.xnb">
+      <Link>Content\HelicopterTexture_0.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\Source\Content\HelicopterTexture_1.xnb">
+      <Link>Content\HelicopterTexture_1.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\Source\Content\Hud\ComboBox.xnb">
+      <Link>Content\Hud\ComboBox.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\Source\Content\Hud\mouse-pointer.xnb">
+      <Link>Content\Hud\mouse-pointer.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\Source\Content\Models\cube.xnb">
+      <Link>Content\Skyboxes\cube.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\Source\Content\Models\Helicopter.xnb">
+      <Link>Content\Models\Helicopter.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\Source\Content\Models\UntexturedSphere.xnb">
+      <Link>Content\Models\UntexturedSphere.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\WindowsGL\Shaders\Ambient.fx">
+      <Link>Shaders\Ambient.fx</Link>
+    </Content>
+    <Content Include="..\Content\WindowsGL\Shaders\BumpMap.fx">
+      <Link>Shaders\BumpMap.fx</Link>
+    </Content>
+    <Content Include="..\Content\WindowsGL\Shaders\Diffuse.fx">
+      <Link>Shaders\Diffuse.fx</Link>
+    </Content>
+    <Content Include="..\Content\WindowsGL\Shaders\GrayScale.fx">
+      <Link>Shaders\GrayScale.fx</Link>
+    </Content>
+    <Content Include="..\Content\WindowsGL\Shaders\Reflection.fx">
+      <Link>Shaders\Reflection.fx</Link>
+    </Content>
+    <Content Include="..\Content\WindowsGL\Shaders\Skybox.fx">
+      <Link>Shaders\Skybox.fx</Link>
+    </Content>
+    <Content Include="..\Content\WindowsGL\Shaders\Specular.fx">
+      <Link>Shaders\Specular.fx</Link>
+    </Content>
+    <Content Include="..\Content\WindowsGL\Shaders\Textured.fx">
+      <Link>Shaders\Textured.fx</Link>
+    </Content>
+    <Content Include="..\Content\WindowsGL\Shaders\Transparency.fx">
+      <Link>Shaders\Transparency.fx</Link>
+    </Content>
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Skyboxes\Sunset.xnb">
+    <Content Include="..\Source\Content\HelicopterNormalMap.xnb">
+      <Link>Content\HelicopterNormalMap.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="..\Source\Content\Fonts\Poetsen.xnb">
+      <Link>Content\Fonts\Poetsen.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Source\Content\Skyboxes\Sunset.xnb">
+      <Link>Content\Skyboxes\Sunset.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\Content\WindowsGL\bin\Shaders\Ambient.xnb">
       <Link>Content\Effects\Ambient.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -100,58 +172,13 @@
       <Link>Content\Effects\Transparency.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\Fonts\Poetsen.xnb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\Content\WindowsGL\bin\HelicopterTexture_0.xnb">
-      <Link>Content\HelicopterTexture_0.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Content\WindowsGL\bin\Hud\ComboBox.xnb">
-      <Link>Content\Hud\ComboBox.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Content\WindowsGL\bin\Models\cube.xnb">
-      <Link>Content\Skyboxes\cube.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Content\WindowsGL\bin\Models\Helicopter.xnb">
-      <Link>Content\Models\Helicopter.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Content\WindowsGL\bin\Models\UntexturedSphere.xnb">
-      <Link>Content\Models\UntexturedSphere.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Content\WindowsGL\bin\mouse-pointer.xnb">
-      <Link>Content\Hud\mouse-pointer.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\Content\WindowsGL\bin\Shaders\Skybox.xnb">
       <Link>Content\Skyboxes\Skybox.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\HelicopterNormalMap.xnb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\Content\WindowsGL\bin\HelicopterTexture.xnb">
-      <Link>Content\HelicopterTexture.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\Content\WindowsGL\bin\HelicopterTexture_1.xnb">
-      <Link>Content\HelicopterTexture_1.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <!-- Specify the search path explicitly so the ResolveAssemblyReferences task picks the right ones -->
   <Target Name="BeforeResolveReferences">
     <CreateProperty Value="$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\Windows;$(AssemblySearchPaths)">
