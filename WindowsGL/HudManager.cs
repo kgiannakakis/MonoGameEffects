@@ -75,7 +75,7 @@ namespace Hud
             
             font = content.Load<SpriteFont>("Fonts/Poetsen");
             comboBoxTexture = content.Load<Texture2D>("Hud/ComboBox");
-            mousePointerTexture = content.Load<Texture2D>("Hud/MousePointer");
+            mousePointerTexture = content.Load<Texture2D>("Hud/mouse-pointer");
             comboBoxRectangle = new Rectangle(comboBoxPosX, comboBoxPosY, comboBoxWidth, comboBoxHeight);
             comboBoxOpenRectangle = new Rectangle(comboBoxPosX, comboBoxPosY, comboBoxWidth, comboBoxHeight * (comboBoxOptionsCount + 1));
         }
