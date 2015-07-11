@@ -3,7 +3,7 @@
   <SourceFile>C:/Projects/MonoGameEffects/Content/WindowsGL/../../Source/Content/Models/Helicopter.fbx</SourceFile>
   <SourceTime>2015-07-11T14:05:31.9200376-05:00</SourceTime>
   <DestFile>C:/Projects/MonoGameEffects/Content/WindowsGL/bin/../../Source/Content/Models/Helicopter.xnb</DestFile>
-  <DestTime>2015-07-11T15:03:32.0820915-05:00</DestTime>
+  <DestTime>2015-07-11T15:07:17.5239861-05:00</DestTime>
   <Importer>FbxImporter</Importer>
   <ImporterTime>2015-04-29T12:14:44-05:00</ImporterTime>
   <Processor>ModelProcessor</Processor>
